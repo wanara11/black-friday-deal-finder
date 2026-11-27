@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DealHound — Real Black Friday &amp; Cyber Monday Deals, Checked</title>
+<meta name="description" content="A Black Friday and Cyber Monday deal finder with real deals checked at the store: sale price, usual price, discount, check time and an honest verdict on whether each deal is really a deal.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="30" height="30"><circle cx="15" cy="15" r="12" fill="none" stroke="#fff" stroke-width="2.6"/><line x1="23.5" y1="23.5" x2="29" y2="29" stroke="#fff" stroke-width="3" stroke-linecap="round"/><text x="15" y="20" text-anchor="middle" font-size="13" font-weight="800" fill="#ffd23f" font-family="Arial, sans-serif">$</text></svg>
+      </span>
+      <span class="brand-name">DealHound</span>
+      <span class="brand-tag">Black Friday · Cyber Monday</span>
+    </a>
+    <label class="search">
+      <span class="sr">Search deals</span>
+      <input id="q" type="search" placeholder="Search products, stores…" autocomplete="off">
+    </label>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero" id="hero">
+    <h1>Real Black Friday deals, <em>checked</em> — not just claimed.</h1>
+    <p class="lede">Every deal below was read at its store (or a deals source naming the store) on the check time shown. Sale price, usual price, discount and a plain verdict: is it really a deal?</p>
+    <dl class="stats" id="stats"></dl>
+  </section>
+
+  <section class="filters" id="filters" aria-label="Filters">
+    <div class="filter-row" id="cats" role="group" aria-label="Category"></div>
+    <div class="filter-row">
+      <label>Store
+        <select id="store"><option value="">All stores</option></select>
+      </label>
+      <label>Min discount
+        <select id="mindisc">
+          <option value="0">Any discount</option>
+          <option value="20">20% or more</option>
+          <option value="30">30% or more</option>
+          <option value="40">40% or more</option>
+          <option value="50">50% or more</option>
+        </select>
+      </label>
+      <label>Verdict
+        <select id="verdict">
+          <option value="">Any verdict</option>
+          <option value="real">Real deal</option>
+          <option value="strong">Strong</option>
+          <option value="routine">Routine</option>
+          <option value="inflated">Inflated</option>
+        </select>
+      </label>
+      <label>Sort
+        <select id="sort">
+          <option value="discount">Biggest discount</option>
+          <option value="savings">Biggest savings ($)</option>
+          <option value="price">Lowest price</option>
+          <option value="verdict">Best verdict first</option>
+        </select>
+      </label>
+      <button id="reset" type="button">Reset</button>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+  </section>
+
+  <section id="view" aria-live="polite"></section>
+
+  <section class="method">
+    <h2>How we check</h2>
+    <ol>
+      <li>We read the price at the store itself, or in a deals source that names the store and the price.</li>
+      <li>We record the sale price, the usual (list) price and the exact time the price was read — shown on every deal.</li>
+      <li>We give a verdict: <b>Real deal</b> (a genuine low), <b>Strong</b> (a big honest discount), <b>Routine</b> (an ordinary sale) or <b>Inflated</b> (the “usual” price looks pumped up, or the cut is tiny).</li>
+      <li>No deal is invented. If we could not verify a price, it is not listed.</li>
+    </ol>
+    <p class="fine">Prices change fast on Black Friday — always confirm the price at the store before you buy. Store links open the store in a new tab; this site loads nothing from the network itself.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>DealHound — an independent deal finder built for the make.fun Black Friday bounty. Not affiliated with any store named here.</p>
+  </div>
+</footer>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
